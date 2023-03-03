@@ -1,0 +1,101 @@
+.container-summary {
+
+    display: flex;
+    flex-direction: column;
+
+    background: white;
+    width: 300px;
+    height: 450px;
+    padding: 1rem;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 5px 5px 5px rgb(243, 241, 241);
+
+}
+
+.container-summary h3 {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 15px;
+    color: hsl(0, 1%, 28%);
+}
+
+.container-summary__option-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 15px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.container-summary__option-item div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-summary__option-item img {
+    max-width: 15px;
+    max-height: 15px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.text-gray {
+    color: hsl(240, 7%, 42%);
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.btn {
+    font-size: 18px;
+    margin: 25px 15px;
+    padding: 10px;
+    border-radius: 25px;
+    color: white;
+    background-color: hsla(241, 81%, 54%, 1);
+    border: none;
+}
+
+.btn:hover {
+    background-color:  hsl(224, 30%, 27%);
+}
+
+
+
+.reaction {
+    color: hsl(0, 100%, 67%);
+}
+
+.reaction-bg {
+    background-color: hsla(23, 84%, 58%, 0.1);
+}
+
+.memory {
+    color: hsl(39, 100%, 56%);
+}
+
+.memory-bg {
+    background-color: hsla(39, 100%, 77%, 0.1);
+}
+
+.verbal {
+    color: hsl(166, 100%, 37%);
+}
+
+.verbal-bg {
+    background-color: hsla(108, 77%, 53%, 0.1);
+}
+
+.visual {
+    color: hsl(234, 85%, 45%);
+}
+
+.visual-bg {
+    background-color: hsla(22, 41%, 85%, 0.1);
+}
