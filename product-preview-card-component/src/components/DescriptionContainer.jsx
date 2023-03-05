@@ -6,7 +6,7 @@ export const DescriptionContainer = () => {
     return (
         <div className={classes['description-container']}>
             <p className={classes.description}>Perfume</p>
-            <p className={classes.name}><strong>Gabrielle Essence Eau De Parfum</strong></p>
+            <h1 className={classes.name}><strong>Gabrielle Essence Eau De Parfum</strong></h1>
             <p className={classes.details}>
                 A floral, solar and voluptuous interpretation composed by Olivier Polge, 
                 Perfumer-Creator for the House of CHANEL.

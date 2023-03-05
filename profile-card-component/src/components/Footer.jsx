@@ -4,7 +4,7 @@ import classes from './Footer.module.css';
 export const Footer = () => {
     return (
         <div className={classes.footer}>
-            <h3>Victor Crest <span>26</span></h3>
+            <h1>Victor Crest <span>26</span></h1>
             <p className={classes.city}>London</p>
             <hr className={classes.line} />
             <div className={classes.social}>

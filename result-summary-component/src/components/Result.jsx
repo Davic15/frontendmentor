@@ -4,7 +4,7 @@ import classes from './Result.module.css';
 export const Result = () => {
     return (
         <div className={classes['container-result']}>
-            <h3>Your Result</h3>
+            <h1>Your Result</h1>
             <div className={classes['container-result__circle']}>
                 <p className={classes['container-result__circle-big']}>76</p>
                 <p className={classes['container-result__circle-small']}>of 100</p>

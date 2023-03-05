@@ -7,8 +7,9 @@
     text-align: center;
 }
 
-.container-result h3 {
+.container-result h1 {
     margin-bottom: 1.5rem;
+    font-size: 20px;
     margin-top: 1.5rem;
     color: hsl(241, 100%, 89%);
 }
