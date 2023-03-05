@@ -1,0 +1,81 @@
+.description-container {
+    width: 50%;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.description {
+    padding: 20px 20px 10px 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: hsl(228, 12%, 48%);
+}
+
+.name {
+    padding: 2px 20px;
+}
+
+.name strong {
+    font-family: 'Fraunces', serif;
+    font-size: 35px;
+}
+
+.details {
+    padding: 10px 20px;
+    color: hsl(228, 12%, 48%);
+}
+
+.prices {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+
+.prices_new {
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 37%, 32%);
+    font-size: 35px;
+    margin-right: 20px;
+}
+
+.prices_old {
+    font-family: 'Fraunces', serif;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+    height: 40px;
+    width: 230px;
+    background-color: hsl(158, 37%, 32%);
+    border: none;
+    color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+}
+
+.btn img {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 375px) {
+    .description-container {
+        width: 100%;
+        height: auto;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    .btn {
+        margin-bottom: 15px;
+        width: 300px;
+    }
+}

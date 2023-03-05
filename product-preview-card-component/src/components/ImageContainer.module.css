@@ -1,0 +1,39 @@
+.image-container {
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.image-full {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.image-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 375px) {
+    .image-full {
+        display: none;
+    }
+
+    .image-mobile {
+        display: block;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .image-container {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+}
