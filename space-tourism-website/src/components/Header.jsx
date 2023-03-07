@@ -8,8 +8,9 @@ export const Header = () => {
             <div>
                 <img src={logo} alt='space tourism logo' className='logo' />
             </div>
+            <button className='mobile-nav-toggle' aria-controls='primary-navigation' aria-expanded='false'><span className='sr-only'>Menu</span></button>
             <nav>
-                <ul className='primary-navigation underline-indicators flex'>
+                <ul id='primary-navigation' className='primary-navigation underline-indicators flex'>
                     <li className='active'>
                         <NavLink className='ff-sans-cond uppercase text-white letter-spacing-2' href='!#'><span>00</span>Home</NavLink>
                     </li>
