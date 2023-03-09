@@ -8,8 +8,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 260px;
-
-
 }
 
 .search-container h1 {
@@ -46,13 +44,6 @@ button img {
 .search-container-form button:hover {
     background-color: hsl(0, 0%, 17%);
 }
-
-
-
-
-
-
-
   
 @media (max-width: 550px) {
     .search-container-form input{

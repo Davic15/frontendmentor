@@ -41,12 +41,6 @@
 }
 
 
-
-
-
-  
-
-
 @media (max-width: 850px) {
     .info-container {
         flex-direction: column;
@@ -78,7 +72,6 @@
         border-right: none;
     }
 }
-
 
 @media (max-width: 500px) {
     .info-container {
