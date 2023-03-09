@@ -1,0 +1,14 @@
+.map-container {
+    /*height: 100%;
+    width: auto;*/
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+}
+
+.map-container-inner {
+    /*height: 500px;
+    width: 100%;*/
+    flex: calc(83vh - 100px);
+}

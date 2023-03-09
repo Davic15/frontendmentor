@@ -1,25 +1,28 @@
 import React from 'react';
 import classes from './InfoContainer.module.css';
 
-export const InfoContainer = (props) => {
+export const InfoContainer = ({domainData}) => {
+    const location = domainData.location + ', ' + domainData.postalcode;
+    const timezone = 'UTC ' + domainData.timezone;
     return (
         <div className={classes['info-container']}>
-            <div className={classes['info-container-ip']}>
+            <div className={`${classes['info-container-ip']} ${classes['line-right']}`}>
                 <p className={classes['title']}>IP Address</p>
-                <p className={classes['info']}>192.168.1.1</p>
+                <p className={classes['info']}>{domainData.ip || ""}</p>
             </div>
-            <div className={classes['info-container-location']}>
+            <div className={`${classes['info-container-location']} ${classes['line-right']}`}>
                 <p className={classes['title']}>Location</p>
-                <p className={classes['info']}>Brooklyn, NY 10001</p>
+                <p className={classes['info']}>{domainData.location ? location : ''}</p>
             </div>
-            <div className={classes['info-container-timezone']}>
+            <div className={`${classes['info-container-timezone']} ${classes['line-right']}`}>
                 <p className={classes['title']}>Timezone</p>
-                <p className={classes['info']}>UTW-05:00</p>
+                <p className={classes['info']}>{domainData.timezone ? timezone : ''}</p>
             </div>
             <div className={classes['info-container-isp']}>
                 <p className={classes['title']}>ISP</p>
-                <p className={classes['info']}>Spacex Starlink</p>
+                <p className={classes['info']}>{domainData.isp || ''}</p>
             </div>
         </div>
     )
 }
+

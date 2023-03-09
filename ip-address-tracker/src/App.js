@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { InfoContainer } from './components/InfoContainer';
-import { MapContainer } from './components/MapContainer';
+import { Map } from './components/Map';
 import { SearchContainer } from './components/SearchContainer';
 
 function App() {
+
+  const [domainData, setDomainData] = useState({})
+
+
+  const handleData = (e) => {
+    setDomainData(e);
+  }
+
   return (
-    <div>
-      <SearchContainer />
-      <InfoContainer />
-      <MapContainer />
+    <div className='container'>
+      <SearchContainer onHandleData={handleData}/>
+      <InfoContainer domainData={domainData} />
+      <Map domainData={domainData}/>
     </div>
   );
 }

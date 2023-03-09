@@ -7,7 +7,9 @@
     background-image: url('../assets/pattern-bg-desktop.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 250px;
+    height: 260px;
+
+
 }
 
 .search-container h1 {
@@ -19,7 +21,7 @@
     width: 450px;
     height: 40px;
     padding: 0.2rem 1rem;
-    margin-top: 35px;
+    margin-top: 15px;
     font-size: 18px;
     text-align: left;
 
@@ -43,4 +45,53 @@ button img {
 
 .search-container-form button:hover {
     background-color: hsl(0, 0%, 17%);
+}
+
+
+
+
+
+
+
+  
+@media (max-width: 550px) {
+    .search-container-form input{
+        width: 350px;
+        height: 40px;
+        padding: 0.2rem 1rem;
+        margin-top: 15px;
+        font-size: 18px;
+        text-align: left;
+    
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    .search-container-form input{
+        width: 200px;
+        height: 40px;
+        padding: 0.2rem 1rem;
+        margin-top: 15px;
+        font-size: 18px;
+        text-align: left;
+    
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+}
+
+@media (max-width: 375px) {
+    .search-container-form input{
+        width: 200px;
+        height: 40px;
+        padding: 0.2rem 1rem;
+        margin-top: 15px;
+        font-size: 18px;
+        text-align: left;
+    
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
 }

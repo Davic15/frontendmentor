@@ -5,7 +5,13 @@
   padding: 0;
 }
 
-body {
+html, body {
+  height: 100%;
+  width: 100%;
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
+}
+
+.container {
+  position: relative;
 }
