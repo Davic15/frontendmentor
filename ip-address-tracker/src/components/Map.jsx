@@ -1,6 +1,8 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import L from 'leaflet';
 import classes from './Map.module.css';
+import iconLocation from '../assets/icon-location.svg'
 
 export const Map = (props) => {
     const [position, setPosition] = useState([50.5, 30.5]);
@@ -12,6 +14,12 @@ export const Map = (props) => {
 
     }, [props.domainData.lat, props.domainData.lng])
 
+    const myIcon = new L.icon({
+        iconUrl: iconLocation,
+        iconRetinaUrl: iconLocation,
+        popupAnchor:  [-0, -0],
+        iconSize: [25,35], 
+    })
 
     return (
         <div className={classes['map-container']}>
@@ -21,9 +29,9 @@ export const Map = (props) => {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker position={position}>
+                <Marker position={position} icon={myIcon}>
                     <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
+                        {props.domainData.isp} <br /> {props.domainData.ip}.
                     </Popup>
                 </Marker>
             </MapContainer>
