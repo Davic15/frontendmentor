@@ -1,0 +1,120 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  color: hsl(0, 0%, 41%);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.logo {
+  margin-right: 50px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  color: hsl(0, 0%, 8%);
+}
+
+.up {
+  display: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropbtn  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropbtn img {
+  width: 10px;
+  height: auto;
+  margin-left: 5px;
+}
+
+.flex div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex div p {
+  margin: 0px 0px 0px 15px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  padding: 2.5px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .up {
+  display: block;
+}
+
+.dropdown:hover .down {
+  display: none;
+}
+
+
+/*breack points */
+
+.login-button {
+  margin-left: 45vw;
+}
+
+.register-button  {
+  margin-left: 5vw;
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 15px;
+}
+
+
+/*breack points */
+
+.register-button li:hover {
+  color: hsl(0, 0%, 8%);
+  border-radius: 15px;
+  border: 2px solid hsl(0, 0%, 8%);
+}
