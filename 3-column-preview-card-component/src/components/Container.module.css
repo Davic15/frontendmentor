@@ -1,0 +1,139 @@
+.main-container {
+    width: 900px;
+    height: 450px;
+
+    display: flex;
+
+    border-radius: 15px;
+}
+
+.container {
+    width: 300px;
+    padding: 40px;
+}
+
+.container-sedan {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.container-suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.container-luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+img {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: hsl(0, 0%, 95%);
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    color: hsl(0, 0%, 95%);
+}
+
+.btn {
+    background-color: hsl(0, 0%, 95%);
+    border: none;
+    border-radius: 25px;
+
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 15px 35px;
+    margin-top: 65px;
+}
+
+.btn-sedan {
+    color: hsl(31, 77%, 52%);
+}
+
+.btn-suvs {
+    color: hsl(184, 100%, 22%);
+}
+
+.btn-luxury {
+    color: hsl(179, 100%, 13%);
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: hsl(0, 0%, 95%);
+    border: 1px solid white;
+}
+
+@media only screen and (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        justify-content: center;
+        margin: 50% 3% 0 25%;
+    }
+
+    .container-sedan {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+    }
+    
+    .container-luxury {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .main-container {
+        flex-direction: column;
+        justify-content: center;
+        margin: 50% 3% 0 15%;
+    }
+
+    .container-sedan {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+    }
+    
+    .container-luxury {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .main-container {
+        flex-direction: column;
+        justify-content: center;
+        margin: 50% 0% 0 5%;
+    }
+
+    .container-sedan {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+    }
+    
+    .container-luxury {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 0;
+    }
+}
+
+
+
+
