@@ -1,0 +1,128 @@
+.container {
+    width: 300px;
+    height: 500px;
+    padding: 20px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 15px;
+}
+
+.container-image {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.ethereum {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: hsl(178, 100%, 50%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-image:hover .overlay {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 10px;
+}
+
+p {
+    color: hsl(215, 32%, 27%);
+    font-weight: 400;
+}
+
+.container-price {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+.price img,
+.time img {
+    width: 13px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.price,
+.time {
+    display: flex;
+    align-items: center;
+}
+
+.price p,
+.time p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.price p {
+    color: hsl(178, 100%, 50%);
+}
+
+hr {
+    height: 1px;
+    background-color: hsl(215, 32%, 27%);
+    border: none;
+}
+
+.container-creator {
+    display: flex;
+    align-items: center;
+}
+
+.container-creator p {
+    font-size: 16px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border: 1px solid hsl(0, 0%, 100%) ;
+    border-radius: 50%;
+    margin: 15px 15px 0 0;
+}
+
+strong {
+    color: hsl(0, 0%, 100%);
+    font-weight: 300;
+}
+
+strong:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+h1:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
