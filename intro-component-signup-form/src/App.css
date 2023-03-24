@@ -16,3 +16,20 @@ body {
   background-image: url('./assets/bg-intro-desktop.png');
   background-color: hsl(0, 100%, 74%);
 }
+
+
+@media only screen and (max-width: 500px) {
+  body {
+    background-image: url('./assets/bg-intro-mobile.png');
+    background-color: hsl(0, 100%, 74%);
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  body {
+    background-image: url('./assets/bg-intro-mobile.png');
+    background-color: hsl(0, 100%, 74%);
+  }
+}
+

@@ -55,7 +55,7 @@ export const Container = () => {
                 <p className={classes['try']}><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
             
                 <form>
-                    <input className={classes.input} type='text' placeholder='First Name' onBlur={handleName} />
+                    <input className={`${classes.input} ${name ? classes['error-input'] : ''}`} type='text' placeholder='First Name' onBlur={handleName} />
                     {name && <p className={classes['error-span']}>First Name cannot be empty</p>}
                     
 
@@ -71,11 +71,7 @@ export const Container = () => {
                     <button className={classes.btn}>Claim your free trial</button>
                     <p className={classes.tos}>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
                 </form>
-            
-            
             </div>
-
-            
         </div>
     )
 }
