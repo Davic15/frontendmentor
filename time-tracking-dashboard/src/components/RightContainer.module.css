@@ -1,0 +1,34 @@
+.right-container {
+    border: 1px solid green;
+    width: 75%;
+    height: auto;
+
+}
+
+.card {
+    width: 25%;
+    height: 40%;
+    border: 1px solid red;
+    background-color: hsl(15, 100%, 70%);
+    margin: 0 15px;
+}
+
+.top {
+    position: relative;
+    
+}
+
+.top img {
+    width: 30px;
+    height: 30px;
+    margin-left: 75%;
+    position: absolute;
+    z-index: 0;
+}
+
+.info {
+    z-index: 1000;
+    height: auto;
+    background-color: red;
+    margin-top: 20px;
+}
