@@ -3,32 +3,66 @@
     width: 75%;
     height: auto;
 
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 
 .card {
-    width: 25%;
-    height: 40%;
+    width: 28%;
+    height: 47.8%;
     border: 1px solid red;
+
+    margin: 0 15px 15px 15px;
+    border-radius: 10px;
+}
+
+.work {
     background-color: hsl(15, 100%, 70%);
-    margin: 0 15px;
 }
 
 .top {
-    position: relative;
-    
+    /*position: relative;*/
+    position: absolute;
+    z-index: 1;
+    margin-left: 120px;
 }
 
 .top img {
-    width: 30px;
-    height: 30px;
-    margin-left: 75%;
+    width: 40px;
+    height: 40px;
+    
     position: absolute;
-    z-index: 0;
 }
 
 .info {
-    z-index: 1000;
-    height: auto;
-    background-color: red;
+    position: absolute;
+    height: 170px;
+    width: 178px;
+    background-color: hsl(235, 46%, 20%);
     margin-top: 20px;
+    border-radius: 10px;
+    z-index: 3;
+    color: white;
+}
+
+.info div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.big-info {
+    font-size: 40px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+
+.small-info {
+    font-size: 12px;
+    margin-left: 20px;
 }

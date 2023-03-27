@@ -39,8 +39,17 @@
     padding: 15px;
 }
 
-.option p {
+.option button {
+    display: flex;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    background-color: transparent;
     color: white;
-    margin: 9px 5px;
-    font-size: 15px;
+    margin: 5px;
+}
+
+.option button:hover {
+    color: red;
+    cursor: pointer;
 }

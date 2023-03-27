@@ -12,9 +12,9 @@ export const LeftContainer = () => {
                 <h1>Jeremy Robson</h1>
             </div>
             <div className={classes['option']}>
-                <p>Daily</p>
-                <p>Weekly</p>
-                <p>Monthly</p>
+                <button>Daily</button>
+                <button>Weekly</button>
+                <button>Monthly</button>
             </div>
         </div>
     )
