@@ -1,7 +1,23 @@
 .container {
-    border: 1px solid red;
     width: 850px;
     height: 400px;
 
     display: flex;
+}
+
+/*
+@media (max-width: 375px) {
+  .container {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+  }
+}*/
+
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    width: auto;
+    height: 2300px
+  }
 }
