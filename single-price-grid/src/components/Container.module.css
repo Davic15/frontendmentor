@@ -1,0 +1,19 @@
+.outter-container {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 500px;
+    border-radius: 15px;
+}
+
+.inner-bottom-container {
+    display: flex;
+    height: 50%;
+}
+
+.inner-top-container {
+    height: 50%;
+    background: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}   

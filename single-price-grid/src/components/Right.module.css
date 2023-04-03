@@ -1,0 +1,6 @@
+.container {
+    width: 50%;
+    padding: 35px;
+    background-color: hsl(179, 74%, 42%);
+    border-bottom-right-radius: 15px;
+}
