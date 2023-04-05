@@ -17,3 +17,22 @@
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }   
+  
+@media only screen and (max-width: 800px) {
+    .outter-container {
+        flex-direction: column;
+        width: 400px;
+        height: auto;
+    }
+
+    .inner-bottom-container {
+        height: 100%;
+        flex-direction: column;
+
+    }
+    
+    .inner-top-container {
+        width: 100%;
+        background: white;
+    }   
+}

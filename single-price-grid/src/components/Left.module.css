@@ -46,3 +46,10 @@ button:hover {
     background-color: hsl(71, 48%, 54%);
     cursor: pointer;
 }
+
+@media only screen and (max-width: 800px) {
+    .container {
+        width: auto;
+        border-bottom-left-radius: 0px;
+    }
+}

@@ -4,3 +4,18 @@
     background-color: hsl(179, 74%, 42%);
     border-bottom-right-radius: 15px;
 }
+
+.container p {
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.4;
+    color: hsl(204, 43%, 93%);
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        width: auto;
+        border-bottom-left-radius: 15px;
+    }
+}
