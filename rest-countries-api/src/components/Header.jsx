@@ -8,7 +8,7 @@ export const Header = () => {
     return (
         <header>
             <nav className={classes['nav']}>
-                <h1>Where ins the world?</h1>
+                <h1>Where in the world?</h1>
                 <div className={classes['dark-mode']}>
                     <FontAwesomeIcon icon={faMoon} />
                     <p>Dark Mode</p>

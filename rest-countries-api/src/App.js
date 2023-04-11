@@ -1,11 +1,9 @@
 import './App.css';
-import { Header } from './components/Header';
+import { MyRoutes } from './router/MyRoutes';
 
 function App() {
   return (
-    <div>
-      <Header />
-    </div>
+    <MyRoutes />
   );
 }
 
