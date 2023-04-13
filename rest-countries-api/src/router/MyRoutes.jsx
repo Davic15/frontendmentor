@@ -13,7 +13,7 @@ export const MyRoutes = () => {
             <Routes>
                 <Route path='/' element={ <Navigate to='/home' />} />
                 <Route path='/home' element={ <Main />} />
-                <Route path='/country/:name' element={ <Details /> } />
+                <Route path='/country/:country' element={ <Details /> } />
 
                 <Route path='/404' element={ <Error /> } />
                 <Route path='*' element={ <Navigate replace to='/404' />} />

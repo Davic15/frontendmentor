@@ -1,0 +1,13 @@
+.container-main {
+    height: 91vh;
+    background-color: white;
+}
+
+.container-top { 
+    padding: 25px 55px;
+}
+
+.container-top button {
+    font-size: inherit;
+    padding: 12px 55px;
+}
