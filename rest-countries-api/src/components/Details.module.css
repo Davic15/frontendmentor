@@ -1,6 +1,6 @@
 .container-main {
-    height: 100%;
-    background-color: white;
+    height: 91vh;
+    background-color: hsl(0, 0%, 100%);
 }
 
 .container-top { 
@@ -53,16 +53,64 @@
     margin-top: 55px;
 }
 
-button {
+.container-top button {
     border: none;
     border-radius: 5px;
+    box-shadow: 0px 0px 10px hsl(0, 0%, 52%);
 }
 
-button svg {
+.container-top button svg {
     margin-right: 15px;
 }
 
 button:hover {
     cursor: pointer;
-    background-color: gray;
+    background-color: hsl(0, 0%, 52%);
+}
+
+.borders span {
+    padding: 5px 8px;
+    margin-left: 15px;
+    box-shadow: 0px 0px 10px hsl(0, 0%, 52%);
+}
+
+
+@media only screen and (max-width: 550px) {
+    .container-details__inner {
+        flex-direction: column;
+    }
+
+    .borders span {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .country {
+        font-size: 40px;
+        margin-bottom: -10px;
+    }
+
+    .container-right {
+        margin-top: 15px;
+    }
+
+    .container-bottom {
+        margin-top: 15px;
+    }
+}
+  
+@media only screen and (max-width: 1300px) {
+    .container-main {
+        height: 91vh;
+    }
+
+    .container-info {
+        flex-direction: column;
+    }
+
+    .container-flag {
+        width: auto;
+        height: auto;
+    }
+
 }

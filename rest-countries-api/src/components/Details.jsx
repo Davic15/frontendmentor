@@ -19,7 +19,6 @@ export const Details = () => {
         setLoading(true)
         const request = await fetch(`https://restcountries.com/v3.1/alpha/${country}`);
         const data = await request.json()
-        console.log(data)
         setDetailCountry(data);
         setLoading(false)
     }
@@ -76,7 +75,6 @@ export const Details = () => {
                             </div>
                             <div className={classes['container-details__inner']}>
                                 <div className={classes['container-left']}>
-                                    
                                     <p>Native Name: <span>{getNativeName()}</span></p>
                                     <p>Population: <span>{detailCountry[0].population.toLocaleString()}</span></p>
                                     <p>Region: <span>{detailCountry[0].region}</span></p>
@@ -90,7 +88,7 @@ export const Details = () => {
                                 </div>
                             </div>
                             <div className={classes['container-bottom']}>
-                                <p>Border Countries: <span>{getBorders()}</span></p>
+                                <p className={classes['borders']}>Border Countries: <span>{getBorders()}</span></p>
                             </div>
                         </div>
                     </div>
