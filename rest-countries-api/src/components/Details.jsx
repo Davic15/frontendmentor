@@ -9,7 +9,8 @@ export const Details = () => {
     const navigate = useNavigate();
     const { country } = useParams();
     const [loading, setLoading] = useState(true);
-    const [detailCountry, setDetailCountry] = useState({})
+    const [detailCountry, setDetailCountry] = useState({});
+    const [error, setError] = useState(false);
 
     useEffect(() => {
         getCountryData();
@@ -19,8 +20,15 @@ export const Details = () => {
         setLoading(true)
         const request = await fetch(`https://restcountries.com/v3.1/alpha/${country}`);
         const data = await request.json()
-        setDetailCountry(data);
-        setLoading(false)
+        console.log(data.status)
+        if(data.status === 400) {
+            setDetailCountry({})
+            setError(true)
+            setLoading(true)
+        } else {
+            setDetailCountry(data);
+            setLoading(false)
+        } 
     }
 
     const getNativeName = () => {
@@ -60,6 +68,12 @@ export const Details = () => {
 
     return (
         <>
+            { error === true && 
+                <div className={classes['container-top']}>
+                    <p className={classes['error']}>No data to display. Maybe there is a wrong request.</p>
+                    <button onClick={handleGoingBack}><FontAwesomeIcon icon={faArrowLeft} />Back</button>
+                </div>
+            }
             { loading === false && 
                 <div className={classes['container-main']}>
                     <div className={classes['container-top']}>

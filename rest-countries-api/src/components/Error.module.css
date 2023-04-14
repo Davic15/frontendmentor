@@ -1,0 +1,27 @@
+.container-main {
+    height: 100%;
+    background-color: hsl(0, 0%, 100%);
+    padding: 25px 55px;
+}
+
+
+.container-main button {
+    border: none;
+    border-radius: 5px;
+    font-size: inherit;
+    padding: 12px 55px;
+    box-shadow: 0px 0px 10px hsl(0, 0%, 52%);
+}
+
+.container-main button svg {
+    margin-right: 15px;
+}
+
+.container-main button:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 52%);
+}
+
+.title {
+    padding-bottom: 15px;
+}
