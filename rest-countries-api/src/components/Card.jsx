@@ -15,7 +15,7 @@ export const Card = (props) => {
     return (
         <div className={classes['card']} onClick={ () => handleSingleCountry(props.country.ccn3)}>
             <div className={classes['card-top']}>
-                <img src={props.country.flags.png} alt={props.country.flags.alt} />
+                <img src={props.country.flags.png} alt={props.country.flags.alt || props.country.name.official} />
             </div>
             <div className={`${classes['card-bottom']} ${darkMode.darkMode.darkmode ? classes['dark-mode-bottom'] : classes['light-mode-bottom'] }`}>
                 <h2 className={`${classes['h2']} ${darkMode.darkMode.darkmode ? classes['dark-h2'] : classes['light-h2']} `}>{props.country.name.official}</h2>
