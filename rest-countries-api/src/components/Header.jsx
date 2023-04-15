@@ -12,9 +12,7 @@ export const Header = () => {
     const darkMode = useSelector(state => state)
 
     const handleDarkMode = () => {
-        console.log(darkMode.darkMode.darkmode)
         dispatch(darkModeAction.darkMode())
-        console.log(darkMode.darkMode.darkmode)
     }
 
     return (
