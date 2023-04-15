@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useSelector } from 'react-redux';
 import classes from './Main.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
@@ -11,6 +12,8 @@ export const Main = () => {
     const [region, setRegion] = useState('all');
     const [searchCountry, setSearchCountry] = useState('');
     const textInput = useRef('');
+
+    const darkMode = useSelector((state) => state);
 
     useEffect(() => {
         getDataAllCountries();
@@ -62,19 +65,19 @@ export const Main = () => {
     }
 
     return (
-        <div className={classes['main-container']}>
+        <div className={`${classes['main-container']} ${darkMode.darkMode.darkmode ? classes['dark-mode-background'] : classes['light-mode-background'] }`}>
             <div className={classes['search-container']}>
-                <input type='text' className={`${classes['search-bar']} ${classes['icon']}`} placeholder='Search for a country...' onChange={ e => setSearchCountry(e.target.value)} min={5} ref={textInput}/>
+                <input type='text' className={`${classes['search-bar']} ${classes['icon']} ${darkMode.darkMode.darkmode ? classes['input-dark-background'] : classes['input-light-background'] }`} placeholder='Search for a country...' onChange={ e => setSearchCountry(e.target.value)} min={5} ref={textInput} />
                 <div className={classes['dropdown']}>
                     <div>
-                        <button onClick={displayMenu} className={classes['dropbtn']}>Filter by Region <FontAwesomeIcon icon={faAngleDown} /></button>
+                        <button onClick={displayMenu} className={`${classes['dropbtn']} ${darkMode.darkMode.darkmode ? classes['dropbtn-dark'] : classes['dropbtn-light'] }`}>Filter by Region <FontAwesomeIcon icon={faAngleDown} /></button>
                     </div>
-                    <div id='myDropdown' className={`${classes['dropdown-content']} ${showMenu ? classes['show'] : ''}`}>
-                        <button onClick={ () => handleRegion('africa')}>Africa</button>
-                        <button onClick={ () => handleRegion('americas')}>America</button>
-                        <button onClick={ () => handleRegion('asia')}>Asia</button>
-                        <button onClick={ () => handleRegion('europe')}>Europe</button>
-                        <button onClick={ () => handleRegion('oceania')}>Oceania</button>
+                    <div id='myDropdown' className={`${classes['dropdown-content']} ${showMenu ? classes['show'] : ''}  ${darkMode.darkMode.darkmode ? classes['dropdown-content-dark'] : classes['dropdown-content-light']}`}>
+                        <button onClick={ () => handleRegion('africa')} className={`${classes['button']} ${darkMode.darkMode.darkmode ? classes['button-dark'] : classes['button-light']}`}>Africa</button>
+                        <button onClick={ () => handleRegion('americas')} className={`${classes['button']} ${darkMode.darkMode.darkmode ? classes['button-dark'] : classes['button-light']}`}>America</button>
+                        <button onClick={ () => handleRegion('asia')} className={`${classes['button']} ${darkMode.darkMode.darkmode ? classes['button-dark'] : classes['button-light']}`}>Asia</button>
+                        <button onClick={ () => handleRegion('europe')} className={`${classes['button']} ${darkMode.darkMode.darkmode ? classes['button-dark'] : classes['button-light']}`}>Europe</button>
+                        <button onClick={ () => handleRegion('oceania')} className={`${classes['button']} ${darkMode.darkMode.darkmode ? classes['button-dark'] : classes['button-light']}`}>Oceania</button>
                     </div>
                 </div>
             </div>

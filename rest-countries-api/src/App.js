@@ -3,7 +3,9 @@ import { MyRoutes } from './router/MyRoutes';
 
 function App() {
   return (
-    <MyRoutes />
+    <div className='app-container'>
+      <MyRoutes />
+    </div>
   );
 }
 

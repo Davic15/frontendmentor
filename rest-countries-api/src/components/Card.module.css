@@ -22,20 +22,43 @@
 
 .card-bottom {
     height: 210px;
-    background-color: hsl(0, 0%, 100%);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-h2 {
+.light-mode-bottom {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.dark-mode-bottom {
+    background-color: hsl(209, 23%, 22%);
+}
+
+.h2 {
     padding: 20px;
 }
 
-p {
+.dark-h2 {
+    color: hsl(0, 0%, 100%);
+}
+
+.light-h2 {
+    color: hsl(200, 15%, 8%);
+}
+
+.p {
     padding: 5px 20px;
     font-weight: 600;
 }
 
-p span {
+.p-dark {
+    color: hsl(0, 0%, 100%);
+}
+
+.p-light {
+    color: hsl(200, 15%, 8%);
+}
+
+.p span {
     font-weight: 300;
 }

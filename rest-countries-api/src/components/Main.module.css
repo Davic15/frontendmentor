@@ -1,5 +1,12 @@
 .main-container {
-    height: auto;
+    min-height: 100%;
+}
+
+.dark-mode-background {
+    background-color: hsl(207, 26%, 17%);
+}
+
+.light-mode-background {
     background-color: hsl(204, 43%, 93%);
 }
 
@@ -19,16 +26,24 @@
 }
 
 .icon {
-    background: url('../assets/magnifying-glass-solid.svg') no-repeat scroll 7px 7px;
+    background: url('../assets/magnifying-glass-solid-white.svg') no-repeat scroll 7px 7px;
     background-size: 20px;
-    background-color: hsl(0, 0%, 100%);
 }
 
-
-/*********************/
-.dropbtn {
-    background-color: hsl(0, 0%, 100%);
+.input-light-background {
     color: hsl(200, 15%, 8%);
+    background-color: hsl(0, 0%, 100%);
+    font-weight: bolder;
+
+}
+
+.input-dark-background {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(209, 23%, 22%);
+    font-weight: bolder;
+}
+
+.dropbtn {
     padding: 10px 35px;
     border: 1px solid gray;
     cursor: pointer;
@@ -40,11 +55,25 @@
 .dropbtn svg {
     margin-left: 15px;
 }
-  
-.dropbtn:hover {
+
+.dropbtn-dark {
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+}
+
+.dropbtn-light {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(200, 15%, 8%);
+}
+
+.dropbtn-light:hover {
     background-color: hsl(0, 0%, 52%);
 }
-  
+
+.dropbtn-dark:hover {
+    background-color: hsl(207, 26%, 17%);
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -53,7 +82,6 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: hsl(0, 0%, 100%);
     min-width: 195px;
     overflow: auto;
     box-shadow: 0px 0px 5px hsl(0, 0%, 52%);
@@ -61,9 +89,18 @@
     border-radius: 10px;
     margin-top: 5px;
 }
-  
-.dropdown-content button {
+
+.dropdown-content-dark {
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+}
+
+.dropdown-content-light {
+    background-color: hsl(0, 0%, 100%);
     color: hsl(200, 15%, 8%);
+}
+  
+.button {
     padding: 5px 16px;
     display: block;
     border: none;
@@ -71,13 +108,25 @@
     width: 100%;
     text-align: start;
 }
-  
-.dropdown button:hover {background-color: hsl(0, 0%, 52%);}
-  
-.show {display: block;}
 
+.button-dark {
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+}
 
-/* Country main */
+.button-light {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(200, 15%, 8%);
+}
+
+.dropdown button:hover {
+    background-color: hsl(0, 0%, 52%);
+}
+
+.show {
+    display: block;
+}
+
 .country-container {
     padding: 25px 55px;
     display: flex;

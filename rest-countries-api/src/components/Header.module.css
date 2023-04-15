@@ -1,7 +1,23 @@
-header {
-    background-color: hsl(0, 0%, 100%);
+.header {
     box-shadow: 0px 0px 10px hsl(0, 0%, 52%);
+}
+
+.dark-mode-background {
+    background-color: hsl(209, 23%, 22%);
+    box-shadow: 0px 0px 10px hsl(0, 0%, 52%);
+}
+
+.light-mode-background {
+    background-color: hsl(0, 0%, 100%);
     border-bottom: 2px solid hsl(0, 0%, 52%);
+}
+
+.light-title {
+    color: hsl(200, 15%, 8%);
+}
+
+.dark-title {
+    color: hsl(0, 0%, 100%);
 }
 
 .nav {
@@ -10,16 +26,36 @@ header {
     padding: 25px 55px;
 }
 
-.dark-mode {
+.switch-dark-mode {
     display: flex;
     align-items: center;
+    padding-right: 15px;
 }
 
-.dark-mode p {
+.switch-light-mode {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.switch-light-mode:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 52%);
+    border-radius: 5px;
+}
+
+.switch-dark-mode:hover {
+    cursor: pointer;
+    background-color: hsl(207, 26%, 17%);
+    border-radius: 5px;
+}
+
+.p {
     font-weight: 600;
     font-size: 16px;
 }
 
-.dark-mode svg {
+.svg {
     margin-right: 10px;
+    margin-left: 15px;
 }

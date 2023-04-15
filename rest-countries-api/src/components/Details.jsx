@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import classes from './Details.module.css';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -11,6 +12,7 @@ export const Details = () => {
     const [loading, setLoading] = useState(true);
     const [detailCountry, setDetailCountry] = useState({});
     const [error, setError] = useState(false);
+    const darkMode = useSelector((state) => state);
 
     useEffect(() => {
         getCountryData();
@@ -20,7 +22,6 @@ export const Details = () => {
         setLoading(true)
         const request = await fetch(`https://restcountries.com/v3.1/alpha/${country}`);
         const data = await request.json()
-        console.log(data.status)
         if(data.status === 400) {
             setDetailCountry({})
             setError(true)
@@ -69,15 +70,15 @@ export const Details = () => {
     return (
         <>
             { error === true && 
-                <div className={classes['container-top']}>
+                <div className={`${classes['container-top']} ${darkMode.darkMode.darkmode ? classes['container-top-dark'] : classes['container-top-light'] }`}>
                     <p className={classes['error']}>No data to display. Maybe there is a wrong request.</p>
-                    <button onClick={handleGoingBack}><FontAwesomeIcon icon={faArrowLeft} />Back</button>
+                    <button onClick={handleGoingBack} className={`${classes['button']} ${darkMode.darkMode.darkmode ? classes['button-dark'] : classes['button-light'] }`}><FontAwesomeIcon icon={faArrowLeft} />Back</button>
                 </div>
             }
             { loading === false && 
-                <div className={classes['container-main']}>
+                <div className={`${classes['container-main']} ${darkMode.darkMode.darkmode ? classes['container-main-dark'] : classes['container-main-light'] }`}>
                     <div className={classes['container-top']}>
-                        <button onClick={handleGoingBack}><FontAwesomeIcon icon={faArrowLeft} />Back</button>
+                        <button className={`${classes['button']} ${darkMode.darkMode.darkmode ? classes['button-dark'] : classes['button-light'] }`} onClick={handleGoingBack}><FontAwesomeIcon icon={faArrowLeft} />Back</button>
                     </div>
                     <div className={classes['container-info']}>
                         <div className={classes['container-flag']}>
@@ -85,24 +86,24 @@ export const Details = () => {
                         </div>
                         <div className={classes['container-details']}>
                             <div>
-                                <h2 className={classes['country']}>{detailCountry[0].name.official}</h2>
+                                <h2 className={`${classes['country']} ${darkMode.darkMode.darkmode ? classes['country-dark'] : classes['country-light']}`}>{detailCountry[0].name.official}</h2>
                             </div>
                             <div className={classes['container-details__inner']}>
                                 <div className={classes['container-left']}>
-                                    <p>Native Name: <span>{getNativeName()}</span></p>
-                                    <p>Population: <span>{detailCountry[0].population.toLocaleString()}</span></p>
-                                    <p>Region: <span>{detailCountry[0].region}</span></p>
-                                    <p>Sub Region: <span>{detailCountry[0].subregion}</span></p>
-                                    <p>Capital: <span>{detailCountry[0].capital[0]}</span></p>
+                                    <p className={darkMode.darkMode.darkmode ? classes['description-dark'] : classes['description-light']}>Native Name: <span>{getNativeName()}</span></p>
+                                    <p className={darkMode.darkMode.darkmode ? classes['description-dark'] : classes['description-light']}>Population: <span>{detailCountry[0].population.toLocaleString()}</span></p>
+                                    <p className={darkMode.darkMode.darkmode ? classes['description-dark'] : classes['description-light']}>Region: <span>{detailCountry[0].region}</span></p>
+                                    <p className={darkMode.darkMode.darkmode ? classes['description-dark'] : classes['description-light']}>Sub Region: <span>{detailCountry[0].subregion}</span></p>
+                                    <p className={darkMode.darkMode.darkmode ? classes['description-dark'] : classes['description-light']}>Capital: <span>{detailCountry[0].capital[0]}</span></p>
                                 </div>
                                 <div className={classes['container-right']}>
-                                    <p>Top Level Domain: <span>{detailCountry[0].tld[0]}</span></p>
-                                    <p>Currencies: <span>{getCurrencies()}</span></p>
-                                    <p>Languages: <span>{getLanguages()}</span></p>
+                                    <p className={darkMode.darkMode.darkmode ? classes['description-dark'] : classes['description-light']}>Top Level Domain: <span>{detailCountry[0].tld[0]}</span></p>
+                                    <p className={darkMode.darkMode.darkmode ? classes['description-dark'] : classes['description-light']}>Currencies: <span>{getCurrencies()}</span></p>
+                                    <p className={darkMode.darkMode.darkmode ? classes['description-dark'] : classes['description-light']}>Languages: <span>{getLanguages()}</span></p>
                                 </div>
                             </div>
                             <div className={classes['container-bottom']}>
-                                <p className={classes['borders']}>Border Countries: <span>{getBorders()}</span></p>
+                                <p className={`${classes['borders']} ${darkMode.darkMode.darkmode ? classes['description-dark'] : classes['description-light']}  }`}>Border Countries: <span>{getBorders()}</span></p>
                             </div>
                         </div>
                     </div>

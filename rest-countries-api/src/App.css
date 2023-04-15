@@ -6,11 +6,11 @@
 }
 
 
-html {
+html, body, main, .app-container {
+  height: 100%;
   background-color: hsl(0, 0%, 98%);
-}
-
-body {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 14px;
 }
+
+
